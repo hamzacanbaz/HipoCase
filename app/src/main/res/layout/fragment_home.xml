@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".presentation.MainActivity">
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilSearch"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="@dimen/margin_16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etSearch"
+                android:textSize="16sp"
+                android:hint="@string/search_member"
+                android:drawableStart="@drawable/ic_search"
+                android:drawablePadding="@dimen/margin_16dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            app:layout_constraintBottom_toTopOf="@id/guideline_0.9"
+            app:layout_constraintTop_toBottomOf="@id/tilSearch"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/rvDevelopers"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_developer"
+            />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_0.9"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.9" />
+
+        <Button
+
+            app:layout_constraintTop_toBottomOf="@id/guideline_0.9"
+            android:id="@+id/btnAddNewMember"
+            android:text="@string/add_new_member"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
