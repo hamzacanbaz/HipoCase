@@ -25,7 +25,7 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
-    private val binding get() = _binding
+    private val binding get() = _binding!!
     private val viewModel: HomeViewModel by viewModels()
     private lateinit var developersAdapter: DevelopersAdapter
 
@@ -34,7 +34,7 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = DataBindingUtil.inflate(layoutInflater, R.layout.fragment_home, container, false)
-        return binding?.root
+        return binding.root
     }
 
 
@@ -44,7 +44,7 @@ class HomeFragment : Fragment() {
 
         developersAdapter = DevelopersAdapter()
 
-        view.findViewById<RecyclerView>(R.id.rvDevelopers).let {
+        binding.rvDevelopers.let {
             it.adapter = developersAdapter
             it.addItemDecoration(DevelopersAdapterItemDecoration())
         }
@@ -53,11 +53,11 @@ class HomeFragment : Fragment() {
         observe()
 
 
-        view.findViewById<Button>(R.id.btnAddNewMember).setOnClickListener {
+        binding.btnAddNewMember.setOnClickListener {
             showAddNewMemberDialog()
         }
 
-        view.findViewById<EditText>(R.id.etSearch).doOnTextChanged { text, _, _, _ ->
+        binding.etSearch.doOnTextChanged { text, _, _, _ ->
             val filterList = viewModel.developers.value.filter {
                 it.name.lowercase().startsWith(text.toString())
             }
