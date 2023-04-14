@@ -3,7 +3,7 @@
 This app was made for the Hipo Summer Internship application
 
 ## Screenshots
-|<img src="https://user-images.githubusercontent.com/58326260/178850522-38d547bd-d8bc-4745-b38b-59b09283d4a4.png" width="250" height="500"/>|<img src="https://user-images.githubusercontent.com/58326260/178850599-fd57d34a-c991-4bef-a07d-d76ac00310d9.png" width="250" height="500"/>|<img src="https://user-images.githubusercontent.com/58326260/178850690-36a9eb2e-4fa4-4c11-8d9c-329005236569.png" width="250" height="500"/>|
+<img src="https://user-images.githubusercontent.com/58326260/231993237-451a0c92-4bfc-4cf3-97ce-0b38a5ef2d16.jpg" width="250" height="500"/><img src="https://user-images.githubusercontent.com/58326260/231993257-973345c7-13db-44ee-bf9a-fa826fecfef8.jpg" width="250" height="500"/><img src="https://user-images.githubusercontent.com/58326260/231993262-fda6fcf2-33f3-4c1a-85ba-ae19bd8ad60e.jpg" width="250" height="500"/>
 
 
 ## Tech Stack 
